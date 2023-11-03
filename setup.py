@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='apollo_shared',
-    version='0.0.23',
+    version='0.0.24',
     description='Apollo Shared Library',
     author='Erfan Sahebi',
     packages=find_packages(),
