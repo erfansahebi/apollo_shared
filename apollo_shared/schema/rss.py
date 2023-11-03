@@ -137,7 +137,6 @@ class GetCommentOnFeedSchemaRPCResponse(_CommentSchema):
 
 
 class DeleteCommentOnFeedSchemaRPC(Schema):
-    feed_id = fields.Str(required=True)
     comment_id = fields.Str(required=True)
 
 
