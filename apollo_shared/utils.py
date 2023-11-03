@@ -9,4 +9,4 @@ class Context:
     user_id: typing.Optional[str] = None
 
     def dict(self):
-        return {k: str(v) for k, v in asdict(self).items()}
+        return {k: (str(v) if v is not None else None) for k, v in asdict(self).items()}

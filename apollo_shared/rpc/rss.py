@@ -7,29 +7,50 @@ class RssRPC(ABC):
     name = 'rss'
 
     @abstractmethod
-    def subscribe_rss(self, context: Context,
-                      data: rss_schema.SubscribeRSSSchemaRPC) -> rss_schema.SubscribeRSSSchemaRPCResponse:
+    def subscribe_rss(self,
+                      context: Context,
+                      data: rss_schema.SubscribeRSSSchemaRPC
+                      ) -> rss_schema.SubscribeRSSSchemaRPCResponse:
         pass
 
     @abstractmethod
-    def get_rsses(self, context: Context, data: rss_schema.GetRSSesSchemaRPC) -> rss_schema.GetRSSesSchemaRPCResponse:
+    def get_rsses(self,
+                  context: Context,
+                  data: rss_schema.GetRSSesSchemaRPC
+                  ) -> rss_schema.GetRSSesSchemaRPCResponse:
         pass
 
     @abstractmethod
-    def get_rss(self, context: Context, data: rss_schema.GetRSSSchemaRPC) -> rss_schema.GetRSSSchemaRPCResponse:
+    def get_rss(self,
+                context: Context,
+                data: rss_schema.GetRSSSchemaRPC
+                ) -> rss_schema.GetRSSSchemaRPCResponse:
         pass
 
     @abstractmethod
-    def unsubscribe_rss(self, context: Context,
-                        data: rss_schema.UnsubscribeRSSSchemaRPC) -> rss_schema.UnsubscribeRSSSchemaRPCResponse:
+    def unsubscribe_rss(self,
+                        context: Context,
+                        data: rss_schema.UnsubscribeRSSSchemaRPC
+                        ) -> rss_schema.UnsubscribeRSSSchemaRPCResponse:
         pass
 
     @abstractmethod
-    def get_feed_of_subscribed_rss(self, context: Context,
-                                   data: rss_schema.GetFeedOfSubscribedRSSSchemaRPC) -> rss_schema.GetFeedOfSubscribedRSSSchemaRPCResponse:
+    def get_feed_of_subscribed_rss(self,
+                                   context: Context,
+                                   data: rss_schema.GetFeedOfSubscribedRSSSchemaRPC
+                                   ) -> rss_schema.GetFeedOfSubscribedRSSSchemaRPCResponse:
         pass
 
     @abstractmethod
-    def get_feeds_of_subscribed_rss(self, context: Context,
-                                    data: rss_schema.GetFeedsOfSubscribedRSSSchemaRPC) -> rss_schema.GetFeedsOfSubscribedRSSSchemaRPCResponse:
+    def get_feeds_of_subscribed_rsses(self,
+                                      context: Context,
+                                      data: rss_schema.GetFeedsOfSubscribedRSSesSchemaRPC
+                                      ) -> rss_schema.GetFeedsOfSubscribedRSSSchemaRPCResponse:
+        pass
+
+    @abstractmethod
+    def get_feeds_of_subscribed_rss(self,
+                                    context: Context,
+                                    data: rss_schema.GetFeedsOfSubscribedRSSSchemaRPC
+                                    ) -> rss_schema.GetFeedsOfSubscribedRSSSchemaRPCResponse:
         pass

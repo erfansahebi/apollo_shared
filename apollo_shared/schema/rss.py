@@ -52,8 +52,16 @@ class GetFeedOfSubscribedRSSSchemaRPCResponse(_FeedSchema):
     pass
 
 
-class GetFeedsOfSubscribedRSSSchemaRPC(Schema):
+class GetFeedsOfSubscribedRSSesSchemaRPC(Schema):
     pass
+
+
+class GetFeedsOfSubscribedRSSesSchemaRPCResponse(_FeedSchema):
+    pass
+
+
+class GetFeedsOfSubscribedRSSSchemaRPC(Schema):
+    rss_id = fields.Str(required=True)
 
 
 class GetFeedsOfSubscribedRSSSchemaRPCResponse(_FeedSchema):
