@@ -66,3 +66,79 @@ class GetFeedsOfSubscribedRSSSchemaRPC(Schema):
 
 class GetFeedsOfSubscribedRSSSchemaRPCResponse(_FeedSchema):
     pass
+
+
+class _BookmarkSchema(Schema):
+    id = fields.Str(required=True)
+    feed_id = fields.Str(required=True)
+
+
+class AddToBookmarksSchemaRPC(Schema):
+    feed_id = fields.Str(required=True)
+
+
+class AddToBookmarksSchemaRPCResponse(_BookmarkSchema):
+    pass
+
+
+class GetBookmarksSchemaRPC(Schema):
+    pass
+
+
+class GetBookmarksSchemaRPCResponse(_BookmarkSchema):
+    pass
+
+
+class GetBookmarkSchemaRPC(Schema):
+    bookmark_id = fields.Str(required=True)
+
+
+class GetBookmarkSchemaRPCResponse(_BookmarkSchema):
+    pass
+
+
+class DeleteFromBookmarksSchemaRPC(Schema):
+    bookmark_id = fields.Str(required=True)
+
+
+class DeleteFromBookmarksSchemaRPCResponse(Schema):
+    pass
+
+
+class _CommentSchema(Schema):
+    id = fields.Str(required=True)
+    message = fields.Str(required=True)
+
+
+class AddCommentOnFeedSchemaRPC(Schema):
+    feed_id = fields.Str(required=True)
+    message = fields.Str(required=True)
+
+
+class AddCommentOnFeedSchemaRPCResponse(_CommentSchema):
+    pass
+
+
+class GetCommentsOnFeedSchemaRPC(Schema):
+    feed_id = fields.Str(required=True)
+
+
+class GetCommentsOnFeedSchemaRPCResponse(_CommentSchema):
+    pass
+
+
+class GetCommentOnFeedSchemaRPC(Schema):
+    feed_id = fields.Str(required=True)
+    comment_id = fields.Str(required=True)
+
+
+class GetCommentOnFeedSchemaRPCResponse(_CommentSchema):
+    pass
+
+
+class DeleteCommentOnFeedSchemaRPC(Schema):
+    comment_id = fields.Str(required=True)
+
+
+class DeleteCommentOnFeedSchemaRPCResponse(Schema):
+    pass
