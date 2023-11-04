@@ -1,14 +1,19 @@
 import uuid
 from os import getenv
-from sqlalchemy import Column, DateTime, UUID
+from sqlalchemy import Column, DateTime, UUID, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql import func
 from sqlalchemy.orm import registry
 
 mapper_registry = registry()
 
-Base = declarative_base()
-metadata = Base.metadata
+
+class BaseModel(object):
+    pass
+
+
+metadata = MetaData()
+Base = declarative_base(cls=BaseModel, metadata=metadata)
 
 
 def get_db_url() -> str:
