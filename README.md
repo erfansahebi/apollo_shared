@@ -45,7 +45,7 @@ Repositories:
 - [Apollo EnvDev](https://github.com/erfansahebi/apollo_envdev) ( Docker )
 - [Apollo Gateway](https://github.com/erfansahebi/apollo_gateway)  ( Python -> Nameko )
 - [Apollo Auth](https://github.com/erfansahebi/apollo_auth) ( Python -> Nameko )
-- [Apollo Rss](https://github.com/erfansahebi/apollo_shop) ( Python -> Nameko )
+- [Apollo Rss](https://github.com/erfansahebi/apollo_rss) ( Python -> Nameko )
 - [Apollo Shared](https://github.com/erfansahebi/apollo_shared) ( Python -> Package)
 
 <hr>
@@ -56,10 +56,10 @@ Repositories:
 sudo apt install git-all
 ```
 
-### 2. Pull [Lamia EnvDev](https://github.com/erfansahebi/apollo_envdev)
+### 2. Pull [Apollo EnvDev](https://github.com/erfansahebi/apollo_envdev)
 
 ```shell
-git pull https://github.com/erfansahebi/lamia_envdev
+git pull https://github.com/erfansahebi/apollo_envdev.git
 ```
 
 In this repo, we have a shell for pulling all Repositories.
